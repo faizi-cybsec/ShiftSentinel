@@ -5,7 +5,7 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![CI](https://github.com/faizi-cybsec/ShiftSentinel/actions/workflows/ci.yml/badge.svg)](https://github.com/faizi-cybsec/ShiftSentinel/actions/workflows/ci.yml)
-
+[![RepoGrade](https://www.repo-grade.com/api/badge/faizi-cybsec/shiftsentinel)](https://www.repo-grade.com/report/faizi-cybsec/shiftsentinel)
 ---
 
 ## Why I Built This
