@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Testing & coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Generated reports & local state
+*.html
+!docs/*.html
+handover_report*
+.shiftsentinel/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

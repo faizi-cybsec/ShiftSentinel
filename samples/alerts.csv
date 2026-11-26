@@ -1,0 +1,53 @@
+timestamp,source_ip,dest_ip,host,user,rule_name,severity,mitre_technique,mitre_tactic,description
+2026-11-25T22:08:14Z,172.16.8.14,10.10.0.2,VPN-GW-01,m.davis,Single Failed VPN Login,low,T1110,Credential Access,Invalid MFA token for m.davis
+2026-11-25T22:21:49Z,10.20.14.105,,WS-1105,k.wilson,Policy Violation - Unapproved USB Storage,low,T1091,Initial Access,Mass storage device VID_0781 mounted on WS-1105
+2026-11-25T22:44:03Z,91.240.118.172,203.0.113.25,WEB-DMZ-01,,Web Directory Enumeration,medium,T1595,Reconnaissance,404 burst on /.env and /wp-login.php from 91.240.118.172
+2026-11-25T22:45:19Z,91.240.118.172,203.0.113.25,WEB-DMZ-01,,Web Directory Enumeration,medium,T1595,Reconnaissance,404 burst on /admin and /phpmyadmin from 91.240.118.172
+2026-11-25T22:46:33Z,91.240.118.172,203.0.113.25,WEB-DMZ-01,,Web Directory Enumeration,medium,T1595,Reconnaissance,404 burst on /.git/config from 91.240.118.172
+2026-11-25T22:48:02Z,91.240.118.172,203.0.113.25,WEB-DMZ-01,,Web Directory Enumeration,medium,T1595,Reconnaissance,404 burst on /api/v1/debug from 91.240.118.172
+2026-11-25T23:10:00Z,185.92.72.110,10.10.1.5,BASTION-01,root,SSH Brute Force Attempt,high,T1110,Credential Access,Failed SSH password for root from 185.92.72.110 port 51000 ssh2
+2026-11-25T23:11:03Z,185.92.72.110,10.10.1.5,BASTION-01,admin,SSH Brute Force Attempt,high,T1110,Credential Access,Failed SSH password for admin from 185.92.72.110 port 51001 ssh2
+2026-11-25T23:12:06Z,185.92.72.110,10.10.1.5,BASTION-01,root,SSH Brute Force Attempt,high,T1110,Credential Access,Failed SSH password for root from 185.92.72.110 port 51002 ssh2
+2026-11-25T23:13:09Z,185.92.72.110,10.10.1.5,BASTION-01,admin,SSH Brute Force Attempt,high,T1110,Credential Access,Failed SSH password for admin from 185.92.72.110 port 51003 ssh2
+2026-11-25T23:14:12Z,185.92.72.110,10.10.1.5,BASTION-01,root,SSH Brute Force Attempt,high,T1110,Credential Access,Failed SSH password for root from 185.92.72.110 port 51004 ssh2
+2026-11-25T23:15:15Z,185.92.72.110,10.10.1.5,BASTION-01,admin,SSH Brute Force Attempt,high,T1110,Credential Access,Failed SSH password for admin from 185.92.72.110 port 51005 ssh2
+2026-11-25T23:16:18Z,185.92.72.110,10.10.1.5,BASTION-01,root,SSH Brute Force Attempt,high,T1110,Credential Access,Failed SSH password for root from 185.92.72.110 port 51006 ssh2
+2026-11-25T23:17:21Z,185.92.72.110,10.10.1.5,BASTION-01,admin,SSH Brute Force Attempt,high,T1110,Credential Access,Failed SSH password for admin from 185.92.72.110 port 51007 ssh2
+2026-11-25T23:18:24Z,185.92.72.110,10.10.1.5,BASTION-01,root,SSH Brute Force Attempt,high,T1110,Credential Access,Failed SSH password for root from 185.92.72.110 port 51008 ssh2
+2026-11-25T23:19:27Z,185.92.72.110,10.10.1.5,BASTION-01,admin,SSH Brute Force Attempt,high,T1110,Credential Access,Failed SSH password for admin from 185.92.72.110 port 51009 ssh2
+2026-11-25T23:20:30Z,185.92.72.110,10.10.1.5,BASTION-01,root,SSH Brute Force Attempt,high,T1110,Credential Access,Failed SSH password for root from 185.92.72.110 port 51010 ssh2
+2026-11-25T23:21:33Z,185.92.72.110,10.10.1.5,BASTION-01,admin,SSH Brute Force Attempt,high,T1110,Credential Access,Failed SSH password for admin from 185.92.72.110 port 51011 ssh2
+2026-11-25T23:22:36Z,185.92.72.110,10.10.1.5,BASTION-01,root,SSH Brute Force Attempt,high,T1110,Credential Access,Failed SSH password for root from 185.92.72.110 port 51012 ssh2
+2026-11-25T23:23:39Z,185.92.72.110,10.10.1.5,BASTION-01,admin,SSH Brute Force Attempt,high,T1110,Credential Access,Failed SSH password for admin from 185.92.72.110 port 51013 ssh2
+2026-11-25T23:24:42Z,185.92.72.110,10.10.1.5,BASTION-01,root,SSH Brute Force Attempt,high,T1110,Credential Access,Failed SSH password for root from 185.92.72.110 port 51014 ssh2
+2026-11-25T23:25:45Z,185.92.72.110,10.10.1.5,BASTION-01,admin,SSH Brute Force Attempt,high,T1110,Credential Access,Failed SSH password for admin from 185.92.72.110 port 51015 ssh2
+2026-11-25T23:26:48Z,185.92.72.110,10.10.1.5,BASTION-01,root,SSH Brute Force Attempt,high,T1110,Credential Access,Failed SSH password for root from 185.92.72.110 port 51016 ssh2
+2026-11-25T23:27:51Z,185.92.72.110,10.10.1.5,BASTION-01,admin,SSH Brute Force Attempt,high,T1110,Credential Access,Failed SSH password for admin from 185.92.72.110 port 51017 ssh2
+2026-11-25T23:28:42Z,185.92.72.110,10.10.1.5,BASTION-01,admin,SSH Login Success After Brute Force,critical,T1110,Credential Access,Accepted password for admin from 185.92.72.110 following 18 failed attempts
+2026-11-26T00:15:12Z,45.142.212.61,203.0.113.10,FW-EDGE-01,,External Port Scan Detected,medium,T1046,Discovery,SYN probe blocked from 45.142.212.61 to 203.0.113.10:21
+2026-11-26T00:16:12Z,45.142.212.61,203.0.113.10,FW-EDGE-01,,External Port Scan Detected,medium,T1046,Discovery,SYN probe blocked from 45.142.212.61 to 203.0.113.10:22
+2026-11-26T00:17:12Z,45.142.212.61,203.0.113.10,FW-EDGE-01,,External Port Scan Detected,medium,T1046,Discovery,SYN probe blocked from 45.142.212.61 to 203.0.113.10:23
+2026-11-26T00:18:12Z,45.142.212.61,203.0.113.10,FW-EDGE-01,,External Port Scan Detected,medium,T1046,Discovery,SYN probe blocked from 45.142.212.61 to 203.0.113.10:25
+2026-11-26T00:19:12Z,45.142.212.61,203.0.113.10,FW-EDGE-01,,External Port Scan Detected,medium,T1046,Discovery,SYN probe blocked from 45.142.212.61 to 203.0.113.10:80
+2026-11-26T00:20:12Z,45.142.212.61,203.0.113.10,FW-EDGE-01,,External Port Scan Detected,medium,T1046,Discovery,SYN probe blocked from 45.142.212.61 to 203.0.113.10:110
+2026-11-26T00:21:12Z,45.142.212.61,203.0.113.10,FW-EDGE-01,,External Port Scan Detected,medium,T1046,Discovery,SYN probe blocked from 45.142.212.61 to 203.0.113.10:139
+2026-11-26T00:22:12Z,45.142.212.61,203.0.113.10,FW-EDGE-01,,External Port Scan Detected,medium,T1046,Discovery,SYN probe blocked from 45.142.212.61 to 203.0.113.10:443
+2026-11-26T00:23:12Z,45.142.212.61,203.0.113.10,FW-EDGE-01,,External Port Scan Detected,medium,T1046,Discovery,SYN probe blocked from 45.142.212.61 to 203.0.113.10:445
+2026-11-26T00:24:12Z,45.142.212.61,203.0.113.10,FW-EDGE-01,,External Port Scan Detected,medium,T1046,Discovery,SYN probe blocked from 45.142.212.61 to 203.0.113.10:3306
+2026-11-26T00:25:12Z,45.142.212.61,203.0.113.10,FW-EDGE-01,,External Port Scan Detected,medium,T1046,Discovery,SYN probe blocked from 45.142.212.61 to 203.0.113.10:3389
+2026-11-26T00:26:12Z,45.142.212.61,203.0.113.10,FW-EDGE-01,,External Port Scan Detected,medium,T1046,Discovery,SYN probe blocked from 45.142.212.61 to 203.0.113.10:8080
+2026-11-26T01:12:08Z,10.20.4.18,10.20.4.18,APP-SRV-02,dev_svc,Unusual Sudo Privilege Escalation,high,T1548,Privilege Escalation,Service account dev_svc executed sudo /usr/bin/cat /etc/shadow as root on APP-SRV-02
+2026-11-26T01:14:08Z,10.20.4.18,10.20.4.18,APP-SRV-02,dev_svc,Unusual Sudo Privilege Escalation,high,T1548,Privilege Escalation,Service account dev_svc executed sudo /usr/bin/bash as root on APP-SRV-02
+2026-11-26T01:40:11Z,10.20.15.88,192.0.2.77,WS-1088,a.chen,Outbound Connection to Newly Registered Domain,medium,T1071,Command and Control,DNS query and TLS handshake to cdn-update-sync[.]xyz
+2026-11-26T01:42:55Z,10.20.15.88,192.0.2.77,WS-1088,a.chen,Outbound Connection to Newly Registered Domain,medium,T1071,Command and Control,Repeated beacon POST to cdn-update-sync[.]xyz/api
+2026-11-26T01:45:19Z,10.20.15.88,192.0.2.77,WS-1088,a.chen,Outbound Connection to Newly Registered Domain,medium,T1071,Command and Control,Repeated beacon POST to cdn-update-sync[.]xyz/api
+2026-11-26T02:05:31Z,10.20.11.42,198.51.100.99,WS-1042,j.miller,Malware Detection - Suspicious Dropper,high,T1204,Execution,Suspicious PowerShell encoded command executed from Temp directory
+2026-11-26T02:07:31Z,10.20.11.42,198.51.100.99,WS-1042,j.miller,Malware Detection - Suspicious Dropper,high,T1204,Execution,Defender flagged Trojan:Win32/CobaltLoader.A in C:\Users\j.miller\AppData\Local\Temp\svchost_upd.exe
+2026-11-26T02:09:31Z,10.20.11.42,198.51.100.99,WS-1042,j.miller,Malware Detection - Suspicious Dropper,high,T1204,Execution,Attempted persistence via HKCU\Software\Microsoft\Windows\CurrentVersion\Run
+2026-11-26T03:11:04Z,198.51.100.44,10.10.0.2,VPN-GW-01,s.patel,Single Failed VPN Login,low,T1110,Credential Access,Expired password attempt for s.patel
+2026-11-26T03:29:47Z,10.20.2.50,10.20.2.10,DB-PROD-01,backup_svc,After-Hours Service Account Login,medium,T1078,Defense Evasion,Interactive login by backup_svc outside scheduled backup window
+2026-11-26T03:34:12Z,10.20.2.50,10.20.2.10,DB-PROD-01,backup_svc,After-Hours Service Account Login,low,T1078,Defense Evasion,Scheduled cron job session opened for backup_svc
+2026-11-26T04:08:22Z,10.20.14.105,,WS-1105,k.wilson,Policy Violation - Unapproved USB Storage,low,T1091,Initial Access,USB storage device re-inserted on WS-1105
+2026-11-26T04:19:50Z,10.20.14.105,,WS-1105,k.wilson,Policy Violation - Unapproved USB Storage,low,T1091,Initial Access,Write attempt blocked by DLP policy on WS-1105
+2026-11-26T05:02:18Z,198.51.100.77,10.10.0.2,VPN-GW-01,r.khan,Single Failed VPN Login,low,T1110,Credential Access,Bad password for r.khan from 198.51.100.77
+2026-11-26T05:41:09Z,10.20.2.50,10.20.2.10,DB-PROD-01,backup_svc,After-Hours Service Account Login,low,T1078,Defense Evasion,Session closed for backup_svc on DB-PROD-01

@@ -1,0 +1,13 @@
+{
+  "team_name": "Security Operations Center",
+  "organisation": "",
+  "shifts": ["Morning", "Evening", "Night"],
+  "severity_thresholds": {
+    "watchlist_auto_add": "critical"
+  },
+  "escalation_contacts": {
+    "P1": "",
+    "P2": ""
+  },
+  "watchlist_path": null
+}
