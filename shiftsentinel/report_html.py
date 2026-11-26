@@ -7,7 +7,7 @@ from datetime import datetime, timezone
 from typing import Any
 
 from .metrics import ShiftMetrics
-from .models import SEVERITIES, Incident, WatchlistEntry, format_iso_timestamp
+from .models import Incident, WatchlistEntry, format_iso_timestamp
 from .watchlist import format_age
 
 _SEVERITY_COLORS: dict[str, str] = {
@@ -40,15 +40,17 @@ def _render_hourly_svg(alerts_per_hour: dict[int, int]) -> str:
     bar_w = max(8.0, slot_w - 6.0)
 
     parts: list[str] = [
-        f'<svg viewBox="0 0 {width} {height}" width="100%" height="{height}" '
-        'role="img" aria-label="Alerts per hour (UTC)" '
-        'xmlns="http://www.w3.org/2000/svg" style="display:block;max-width:100%;">',
+        (
+            f'<svg viewBox="0 0 {width} {height}" width="100%" height="{height}" '
+            'role="img" aria-label="Alerts per hour (UTC)" '
+            'xmlns="http://www.w3.org/2000/svg" style="display:block;max-width:100%;">'
+        ),
     ]
 
     # Horizontal gridlines (0%, 50%, 100%)
     for frac in (0.0, 0.5, 1.0):
         y = pad_top + plot_h * (1.0 - frac)
-        label_val = int(round(max_val * frac))
+        label_val = round(max_val * frac)
         parts.append(
             f'<line x1="{pad_left}" y1="{y:.1f}" x2="{width - pad_right}" y2="{y:.1f}" '
             'stroke="#1e2d4a" stroke-width="1" />'
@@ -127,12 +129,13 @@ def generate_html_report(
     max_sev = max(max_sev, 1)
     for sev in ("critical", "high", "medium", "low"):
         count = metrics.severity_counts.get(sev, 0)
-        pct = int(round((count / max_sev) * 100)) if count > 0 else 0
+        pct = round((count / max_sev) * 100) if count > 0 else 0
         color = _SEVERITY_COLORS[sev]
         sev_bars_html.append(
             f'<div class="sev-row">'
             f'<span class="chip chip-{sev}">{_esc(sev.upper())}</span>'
-            f'<div class="sev-bar-track"><div class="sev-bar-fill" style="width:{pct}%;background:{color};"></div></div>'
+            f'<div class="sev-bar-track"><div class="sev-bar-fill" '
+            f'style="width:{pct}%;background:{color};"></div></div>'
             f'<span class="sev-count">{count}</span>'
             f"</div>"
         )

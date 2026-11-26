@@ -98,7 +98,7 @@ def normalize_severity(value: str) -> str:
 def normalize_alert(record: dict[str, Any]) -> Alert:
     """Convert a raw alert dictionary into a normalized Alert instance."""
     if not isinstance(record, dict):
-        raise ValueError("Alert record must be a JSON object or CSV row")
+        raise TypeError("Alert record must be a JSON object or CSV row")
 
     raw_ts = _extract_field(record, _FIELD_ALIASES["timestamp"])
     if not raw_ts:
@@ -144,7 +144,7 @@ def _looks_like_logsentinel_list(records: list[Any]) -> bool:
     """Heuristic check for a top-level list of LogSentinel detection objects."""
     for item in records:
         if isinstance(item, dict):
-            keys = {str(k).strip().lower() for k in item.keys()}
+            keys = {str(k).strip().lower() for k in item}
             if "rule" in keys or "rule_title" in keys or "alert_id" in keys:
                 return True
     return False
@@ -231,6 +231,6 @@ def ingest_file(path: Path) -> IngestResult:
 
     # Fallback auto-detection for non-standard extensions
     stripped = text.lstrip()
-    if stripped.startswith("{") or stripped.startswith("["):
+    if stripped.startswith(("{", "[")):
         return parse_json_text(text)
     return parse_csv_text(text)

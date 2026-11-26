@@ -145,6 +145,25 @@ ShiftSentinel/
 
 Sample alerts and grouped incidents reference [MITRE ATT&CK](https://attack.mitre.org/) technique and tactic IDs (such as `T1110` Brute Force, `T1548` Abuse Elevation Control Mechanism, `T1204` User Execution, and `T1046` Network Service Discovery) for SOC triage alignment.
 
+## Development
+
+Clone the repo and install with the dev tools (pytest, ruff, mypy):
+
+```bash
+git clone https://github.com/faizi-cybsec/ShiftSentinel.git
+cd ShiftSentinel
+pip install -e ".[dev]"
+```
+
+| Command | What it does |
+| --- | --- |
+| `make test` (or `python -m pytest -q`) | Run the test suite |
+| `make lint` (or `ruff check .`) | Lint the codebase |
+| `make typecheck` (or `mypy shiftsentinel`) | Static type checking |
+| `make check` | All three, in order |
+
+CI (GitHub Actions) runs lint, type check, and the tests on Python 3.10, 3.11, and 3.12 for every push and pull request. The runtime tool itself stays zero-dependency — the dev tools above are only needed for development.
+
 ## License
 
 Released under the [MIT License](LICENSE). Copyright &copy; 2026 Faizan Ahmed.

@@ -155,9 +155,8 @@ def apply_watchlist(incidents: list[Incident], entries: list[WatchlistEntry]) ->
         hits: list[str] = []
         for entry in active:
             needle = entry.ioc.lower()
-            if needle in entity_tokens or needle in text_blob:
-                if entry.ioc not in hits:
-                    hits.append(entry.ioc)
+            if (needle in entity_tokens or needle in text_blob) and entry.ioc not in hits:
+                hits.append(entry.ioc)
 
         inc.watchlist_hits = hits
         total_hits += len(hits)

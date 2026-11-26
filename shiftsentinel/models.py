@@ -21,7 +21,7 @@ def parse_iso_timestamp(value: str) -> datetime:
     raw = value.strip()
     if not raw:
         raise ValueError("Empty timestamp")
-    if raw.endswith("Z") or raw.endswith("z"):
+    if raw.endswith(("Z", "z")):
         raw = raw[:-1] + "+00:00"
     dt = datetime.fromisoformat(raw)
     if dt.tzinfo is None:
@@ -97,7 +97,7 @@ class WatchlistEntry:
         }
 
     @classmethod
-    def from_dict(cls, data: dict[str, Any]) -> "WatchlistEntry":
+    def from_dict(cls, data: dict[str, Any]) -> WatchlistEntry:
         """Deserialize entry from a dictionary."""
         return cls(
             ioc=str(data.get("ioc", "")).strip(),
